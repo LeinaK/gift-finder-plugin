@@ -7,7 +7,7 @@
     },
     "servers": [
         {
-            "url": "https://yourapiendpoint.com"
+            "url": "https://gift-finder-plugin.onrender.com"
         }
     ],
     "paths": {
