@@ -1,0 +1,79 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Gift Finder API",
+        "version": "1.0.0",
+        "description": "API for recommending gifts based on user preferences, occasion, and budget."
+    },
+    "servers": [
+        {
+            "url": "https://yourapiendpoint.com"
+        }
+    ],
+    "paths": {
+        "/recommend_gifts": {
+            "post": {
+                "summary": "Get gift recommendations",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "recipient": {
+                                        "type": "string"
+                                    },
+                                    "occasion": {
+                                        "type": "string"
+                                    },
+                                    "budget": {
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "recipient",
+                                    "occasion",
+                                    "budget"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "A list of gift recommendations",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "recommendations": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "name": {
+                                                        "type": "string"
+                                                    },
+                                                    "price": {
+                                                        "type": "number"
+                                                    },
+                                                    "photo_url": {
+                                                        "type": "string"
+                                                    },
+                                                    "url": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

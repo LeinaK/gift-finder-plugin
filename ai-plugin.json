@@ -1,0 +1,17 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Gift Finder",
+    "name_for_model": "gift_finder",
+    "description_for_human": "Find the perfect gift based on recipient preferences and occasion.",
+    "description_for_model": "Provides gift recommendations tailored to recipient preferences, occasion, and budget, with systematic integration of price, photos, and detailed filtering options.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "https://yourusername.github.io/gift-finder-plugin/openapi.json"
+    },
+    "logo_url": "https://yourusername.github.io/gift-finder-plugin/logo.png",
+    "contact_email": "support@yourdomain.com",
+    "legal_info_url": "https://yourdomain.com/terms"
+}
